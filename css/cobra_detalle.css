@@ -1,0 +1,742 @@
+:root {
+    --bg-principal: #131313;
+    --border-color: #333333;
+    --cobra-principal: #FF0505;
+    --cobra-principal-accent: #FF3434;
+    --cobra-orange: #e7ab11;
+    --cobra-orange-accent: #E49751;
+    --cobra-yellow: #E5E816;
+    --cobra-yellow-accent: #EAEC42;
+    --cobra-blue: #006AFF;
+    --cobra-blue-accent: #3186FF;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif!important;
+    color: #ddd;
+}
+
+a {
+    text-decoration: none;
+}
+
+table {
+    border-spacing: 0;
+}
+
+fieldset,
+img {
+    border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+    font-weight: normal;
+    font-style: normal;
+}
+
+strong {
+    font-weight: bold;
+}
+
+ol,
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+caption,
+th {
+    text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+q:before,
+q:after {
+    content: '';
+}
+
+abbr,
+acronym {
+    border: 0;
+}
+
+
+/* Custom CSS
+ * --------------------------------------- */
+
+.wrap {
+    margin-left: auto;
+    margin-right: auto;
+    width: 960px;
+    position: relative;
+}
+
+h1 {
+    font-size: 42pt;
+    margin-bottom: 20px;
+    color: white;
+}
+
+p {
+    font-size: 28pt;
+    line-height: 1.6em;
+    color: white;
+}
+
+small {
+    font-size: 24pt;
+    opacity: 60%;
+}
+
+.container {
+    margin: auto;
+    width: 90%;
+    height: 95%;
+}
+
+#section0 {
+    background-image: url(../img/bg-1-small.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#section4 {
+    background-image: url(../img/bg-footer-small.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Cobra Detalle Grid */
+
+/* -------------------------------- */
+
+.cobra {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 0.5fr;
+    grid-template-areas: "left" "left" "right";
+    border-radius: 50px;
+    background-color: var(--bg-principal);
+    box-shadow: 0px 20px 50px -10px rgba(0, 0, 0, 0.6);
+    border: 2px solid var(--border-color);
+    justify-content: center;
+    align-items: center;
+}
+
+.left {
+    grid-area: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.left p {
+    font-size: 14pt;
+}
+
+.right {
+    height: 100%;
+    grid-area: right;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right img {
+    content: url("../img/cobra-orange-detalle-small.png");
+    height: 100%;
+}
+
+/* contact */
+
+/* ------------------------------- */
+
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 20px;
+    grid-template-areas: "left right" "left right";
+}
+
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    grid-area: left;
+    padding: 40px;
+}
+
+.contact-left h1 {
+    width: 60%;
+}
+
+.contact-left {
+    padding: 5%;
+}
+
+.btn {
+    text-align: center;
+    font-size: 12pt;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+    width: 200px;
+    padding: 20px;
+    margin-top: 50px;
+    border-radius: 50px;
+}
+
+
+/* title and line */
+
+
+/* ------------------------- */
+
+.title p {
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 32pt;
+    font-weight: bold;
+    text-transform: u;
+}
+
+.title-line {
+    display: none;
+}
+
+
+/* detalle y card */
+
+
+/* --------------------------------- */
+
+.detalle {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0px 20px 0px;
+}
+
+.detalle-card {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    min-height: 100px;
+}
+
+.detalle-card p {
+    font-size: 22pt;
+    line-height: 30pt;
+    opacity: 70%;
+}
+
+.detalle-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: var(--cobra-orange);
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.detalle-icon img {
+    width: 100px;
+    height: 100px;
+}
+
+
+/* Info grid */
+
+
+/* -------------------------------- */
+
+.info {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "info-left" "info-right";
+    height: 100%;
+    background-color: var(--bg-principal);
+    box-shadow: 0px 20px 50px -10px rgba(0, 0, 0, 0.6);
+    border: 2px solid var(--border-color);
+    border-radius: 50px;
+}
+
+.info-left {
+    grid-area: info-left;
+    padding: 0px 40px 0px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.info-left h2,
+.info-right h2 {
+    font-size: 32pt;
+    margin-bottom: 10px;
+    color: var(--cobra-orange);
+}
+
+.info-left p,
+.info-right p {
+    font-size: 22pt;
+    opacity: 80%;
+}
+
+.info-right {
+    text-align: center;
+    grid-area: info-right;
+    display: flex;
+    padding: 0px 40px 0px 40px;
+    flex-direction: column;
+}
+
+
+/* Cobra Sport Pre-Workout
+ * --------------------------------------- */
+
+.contact {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 20px;
+    grid-template-areas: "left" "right";
+    border-radius: 50px;
+    background-color: var(--bg-principal);
+    box-shadow: 0px 20px 50px -10px rgba(0, 0, 0, 0.6);
+    border: 2px solid var(--border-color);
+}
+
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    grid-area: left;
+    padding: 20px;
+}
+
+.contact-left {
+    padding: 5%;
+}
+
+.contact-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: right;
+    position: relative;
+    overflow: hidden;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.btn {
+    font-size: 22pt;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+    width: 250px;
+    padding: 30px;
+    margin-top: 50px;
+    border-radius: 50px;
+}
+
+.contact h1 {
+    margin-bottom: 0px;
+}
+
+.contact-form-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 28pt;
+    margin-top: 40px;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 40px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: var(--cobra-principal);
+    color: white;
+    padding: 40px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 30px;
+    font-size: 28pt;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+label {
+    margin-bottom: 20px;
+}
+
+.contact iframe {
+    width: 90%;
+    height: 90%;
+    border-radius: 20px;
+}
+
+input[type="text"],
+textarea {
+    background-color: #252525;
+    border: none;
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    resize: none;
+}
+
+ ::placeholder {
+    color: white;
+    font-size: 28pt;
+    font-weight: 400;
+    font-style: italic;
+    opacity: 40%;
+}
+
+@media screen and (min-width: 990px) {
+    .container {
+        width: 1400px;
+        max-width: 1400px;
+        height: 90%;
+    }
+    #section0 {
+        background-image: url(../img/bg-1-big.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .cobra,
+    .info {
+        background-image: url(../img/bg-2.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #section4 {
+        background-image: url(../img/bg-footer-big.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    h1 {
+        font-size: 32pt;
+    }
+    span {
+        align-self: flex-start;
+    }
+    p {
+        width: 80%;
+        font-size: 12pt;
+    }
+    small {
+        display: none;
+    }
+    /* Cobra Detalle Grid */
+    /* -------------------------------- */
+    .cobra {
+        display: grid;
+        height: 100%;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-gap: 20px;
+        grid-template-areas: "left left right";
+        border-radius: 50px;
+        background-color: var(--bg-principal);
+        box-shadow: 0px 20px 50px -10px rgba(0, 0, 0, 0.6);
+        border: 2px solid var(--border-color);
+    }
+    .left {
+        padding: 40px;
+        grid-area: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .left p {
+        font-size: 14pt;
+    }
+    .right {
+        grid-area: right;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+    }
+    .right img {
+        margin-left: 10px;
+        margin-right: 100px;
+        height: 80%;
+    }
+    /* contact */
+    /* ------------------------------- */
+    .contact {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 20px;
+        grid-template-areas: "left right" "left right";
+    }
+    .contact-left {
+        display: flex;
+        flex-direction: column;
+        grid-area: left;
+        padding: 40px;
+    }
+    .contact-left h1 {
+        width: 60%;
+    }
+    .contact-left {
+        padding: 5%;
+    }
+    .btn {
+        text-align: center;
+        font-size: 12pt;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: white;
+        width: 200px;
+        padding: 20px;
+        margin-top: 50px;
+        border-radius: 50px;
+    }
+    /* title and line */
+    /* ------------------------- */
+    .title {
+        width: 100%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-left: 40px;
+    }
+    .title p {
+        width: 250px;
+        margin-bottom: 0;
+    }
+    .title-line {
+        width: 200px;
+        height: 2px;
+        background-color: white;
+        display: block;
+    }
+    /* detalle y card */
+    /* --------------------------------- */
+    .detalle {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0px 20px 0px;
+    }
+    .detalle-card {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 20px;
+        min-height: 100px;
+        text-align: left;
+    }
+    .detalle-icon {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background-color: var(--cobra-orange);
+        margin-right: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    .detalle-icon img {
+        width: 70px;
+        height: 70px;
+    }
+    /* Info grid */
+    /* -------------------------------- */
+    .info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "info-left info-right";
+        height: 100%;
+        background-color: var(--bg-principal);
+        box-shadow: 0px 20px 50px -10px rgba(0, 0, 0, 0.6);
+        border: 2px solid var(--border-color);
+        border-radius: 50px;
+    }
+    .info-left {
+        grid-area: info-left;
+        padding: 0px 40px 0px 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 40px;
+        text-align: left;
+    }
+    .info-left h2,
+    .info-right h2 {
+        font-size: 22pt;
+        margin-bottom: 10px;
+        color: var(--cobra-orange);
+    }
+    .info-left p,
+    .info-right p {
+        font-size: 14pt;
+        opacity: 80%;
+    }
+    .info-right {
+        text-align: left;
+        grid-area: info-right;
+        padding: 0px 40px 0px 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    /* Contact
+    * --------------------------------------- */
+    .contact h1 {
+        margin-bottom: 0px;
+    }
+    .contact-form-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        font-size: 24pt;
+        margin-top: 40px;
+    }
+    input[type=text] {
+        width: 100%;
+        padding: 30px 10px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        box-sizing: border-box;
+        margin-bottom: 30px;
+    }
+    input[type=submit] {
+        background-color: var(--cobra-principal);
+        cursor: pointer;
+        margin-top: 30px;
+        text-transform: uppercase;
+        font-size: 14pt;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-top: 50px;
+        border-radius: 50px;
+        padding: 20px 30px;
+    }
+    input[type=submit]:hover {
+        background-color: var(--cobra-principal-accent);
+    }
+    label {
+        margin-bottom: 20px;
+    }
+    .contact iframe {
+        width: 90%;
+        height: 90%;
+        border-radius: 20px;
+    }
+    input[type="text"],
+    textarea {
+        background-color: #252525;
+        border: none;
+    }
+    textarea {
+        width: 100%;
+        height: 200px;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        border-radius: 20px;
+        resize: none;
+    }
+     ::placeholder {
+        color: white;
+        font-size: 12pt;
+        font-weight: 400;
+        font-style: italic;
+        opacity: 40%;
+    }
+}
